@@ -1,24 +1,24 @@
 package Pojo;
 
 public class Student {
-    private String idstudent;
+    private int idstudent;
     private String stuname;
     private String password;
 
     public Student() {
     }
 
-    public Student(String idstudent, String stuname, String password) {
+    public Student(int idstudent, String stuname, String password) {
         this.idstudent = idstudent;
         this.stuname = stuname;
         this.password = password;
     }
 
-    public String getIdstudent() {
+    public int getIdstudent() {
         return idstudent;
     }
 
-    public void setIdstudent(String idstudent) {
+    public void setIdstudent(int idstudent) {
         this.idstudent = idstudent;
     }
 

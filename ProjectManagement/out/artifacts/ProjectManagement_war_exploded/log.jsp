@@ -3,7 +3,7 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>系统登录 - 超市订单管理系统</title>
+  <title>在线网站学习系统</title>
   <link type="text/css" rel="stylesheet" href="css/style.css" />
   <script type="text/javascript">
     /* if(top.location!=self.location){
@@ -14,7 +14,7 @@
 <body class="login_bg">
 <section class="loginBox">
   <header class="loginHeader">
-    <h1>超市订单管理系统</h1>
+    <h1>在线网站学习系统</h1>
   </header>
   <section class="loginCont">
     <form class="loginForm" action="LoginServlet"  name="actionForm" id="actionForm"  method="post" >
@@ -23,6 +23,8 @@
         <input type="radio" name="userType" value="teacher">教师
         <input type="radio" name="userType" value="student">学生
       </div>
+    <form class="loginForm" action="${pageContext.request.contextPath }/LoginServlet"  name="actionForm" id="actionForm"  method="post" >
+      <div class="info">${error}</div>
       <div class="inputbox">
         <label for="userCode">用户名：</label>
         <input type="text" class="input-text" id="userCode" name="userCode" placeholder="请输入用户名" required/>
@@ -32,9 +34,9 @@
         <input type="password" id="userPassword" name="userPassword" placeholder="请输入密码" required/>
       </div>
       <div class="subBtn">
-
         <input type="submit" value="登录"/>
-        <input type="reset" value="重置"/>
+        <a href="register.jsp">去注册</a>
+        <!--<input type="reset" value="重置"/>-->
       </div>
     </form>
   </section>
