@@ -1,14 +1,12 @@
-package servlet.student;
-
 import Pojo.Student;
-import Pojo.Teacher;
-import org.apache.taglibs.standard.lang.jstl.Constants;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import service.Student.StudentService;
 import service.Student.StudentServiceImpl;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet(name = "LoginServlet", value = "/LoginServlet")
@@ -27,6 +25,7 @@ public class LoginServlet extends HttpServlet {
         String userPassword = request.getParameter("userPassword");
         //调用service方法，进行用户匹配
         if(userType!=null && userType.equals("teacher")){
+            System.out.println("11111");
             if(userCode.equals("admin") && userPassword.equals("admin")){
                 //教师端成功登录
                 //页面重定向
