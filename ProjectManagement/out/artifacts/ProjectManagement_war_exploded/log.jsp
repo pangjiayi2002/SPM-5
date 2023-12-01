@@ -17,13 +17,13 @@
         <h1>在线网站学习系统</h1>
     </header>
     <section class="loginCont">
-        <form class="loginForm" action="${pageContext.request.contextPath }/LoginServlet"  name="actionForm"   method="post" >
+        <form class="loginForm" action="${pageContext.request.contextPath}/servlet.student.LoginServlet"  name="actionForm"   method="post" >
             <div class="info">${requestScope.error }</div>
             <div style="display:flex;justify-content:center;align-items:center;">
                 <input type="radio" name="userType" value="teacher">教师
                 <input type="radio" name="userType" value="student">学生
             </div>
-            <!--<form class="loginForm" action="${pageContext.request.contextPath }/LoginServlet"  name="actionForm" id="actionForm"  method="post" >-->
+            <!--<form class="loginForm" action="${pageContext.request.contextPath }/servlet.student.LoginServlet"  name="actionForm" id="actionForm"  method="post" >-->
             <!--<div class="info">${error}</div>-->
             <div class="inputbox">
                 <label for="userCode">用户名：</label>

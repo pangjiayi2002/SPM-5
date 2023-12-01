@@ -3,6 +3,7 @@ package Dao.student;
 import Pojo.Student;
 
 import java.sql.Connection;
+import java.util.List;
 
 public interface StudentDao {
     /**
@@ -17,4 +18,5 @@ public interface StudentDao {
 
     int add(Connection connection, Student student) throws Exception;
 
+    List<String> getStuNameList(Connection connection)throws Exception;
 }

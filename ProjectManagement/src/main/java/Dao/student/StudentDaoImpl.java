@@ -7,6 +7,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StudentDaoImpl implements StudentDao{
     /**
@@ -52,5 +54,22 @@ public class StudentDaoImpl implements StudentDao{
             BaseDao.closeResource(null, pstm, null);
         }
         return updateRows;
+    }
+
+    public ArrayList<String> getStuNameList(Connection connection) throws SQLException {
+        PreparedStatement pstm=null;
+        ResultSet rs=null;
+        ArrayList<String> StuNameList=new ArrayList<>();
+        if(null!=connection){
+            List<Object> list=new ArrayList<>();
+            String sql="select stuname from student";
+            Object[] params=list.toArray();
+            rs=BaseDao.execute(connection,pstm,rs,sql.toString(),params);
+            while(rs.next()){
+                StuNameList.add(rs.getString("stuname"));
+            }
+            BaseDao.closeResource(null,pstm,rs);
+        }
+        return StuNameList;
     }
 }

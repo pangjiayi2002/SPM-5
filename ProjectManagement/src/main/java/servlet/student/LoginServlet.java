@@ -1,3 +1,5 @@
+package servlet.student;
+
 import Pojo.Student;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -9,7 +11,7 @@ import service.Student.StudentServiceImpl;
 
 import java.io.IOException;
 
-@WebServlet(name = "LoginServlet", value = "/LoginServlet")
+@WebServlet(name = "servlet.student.LoginServlet", value = "/servlet.student.LoginServlet")
 public class LoginServlet extends HttpServlet {
     StudentService studentService=new StudentServiceImpl();
     @Override
@@ -33,7 +35,7 @@ public class LoginServlet extends HttpServlet {
             }else{
                 //页面转发（log.jsp）带出提示信息
                 request.setAttribute("error","用户名或密码不正确");
-                request.getRequestDispatcher("login.jsp").forward(request,response);
+                request.getRequestDispatcher("log.jsp").forward(request,response);
             }
         }else{
             //学生端

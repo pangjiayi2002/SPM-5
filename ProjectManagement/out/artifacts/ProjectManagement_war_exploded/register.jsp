@@ -1,20 +1,42 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <html>
-<head>
-    <title>注册</title>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>在线网站学习系统</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript">
+        /* if(top.location!=self.location){
+              top.location=self.location;
+         } */
+    </script>
 </head>
-<body>
-<form action="" method="post">
-    <div align="center">
-        <span style="font-size: 20px">在线学习网站</span><hr>
-        <%--        <h1 style="color: red"><%=msg%></h1>--%>
-        <span style="font-size: 20px">用户名:</span>
-        <input type="text" name="speaker"><br><br>
-        <span style="font-size: 20px">密码:</span>
-        <input type="text" name="speaker"><br><br>
-        <input type="submit" value="登录" style="font-size: 20px">
-        <input type="button" value="注册" style="font-size: 20px" onclick="parent.location.href='/register.jsp'"/>
-    </div>
-</form>
+<body class="login_bg">
+<section class="loginBox">
+    <header class="loginHeader">
+        <h1>在线网站学习系统</h1>
+    </header>
+    <section class="loginCont">
+        <form class="loginForm" action="${pageContext.request.contextPath }/RegisterServlet"  name="actionForm"   method="post" >
+            <div class="info">${requestScope.error }</div>
+
+            <!--<form class="loginForm" action="${pageContext.request.contextPath }/servlet.student.LoginServlet"  name="actionForm" id="actionForm"  method="post" >-->
+            <!--<div class="info">${error}</div>-->
+            <div class="inputbox">
+                <label for="userCode">用户名：</label>
+                <input type="text" class="input-text" id="userCode" name="userCode" placeholder="请输入用户名" required/>
+            </div>
+            <div class="inputbox">
+                <label for="userPassword">密码：</label>
+                <input type="password" id="userPassword" name="userPassword" placeholder="请输入密码" required/>
+            </div>
+            <div class="subBtn">
+                <input type="submit" value="登录"/>
+
+                <!--<input type="reset" value="重置"/>-->
+            </div>
+        </form>
+    </section>
+</section>
 </body>
 </html>
