@@ -32,7 +32,6 @@ public class RegisterServlet extends HttpServlet {
         }else {
             studentService.add(student);
             request.getRequestDispatcher("login.jsp").forward(request, response);
-
         }
 
     }
