@@ -15,7 +15,12 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //获取用户名和密码
+        String userType=request.getParameter("userType");
         String userCode = request.getParameter("userCode");
         String userPassword = request.getParameter("userPassword");
+        if(userType!=null && userType.equals("teacher")){
+
+        }
+
     }
 }

@@ -17,8 +17,12 @@
     <h1>超市订单管理系统</h1>
   </header>
   <section class="loginCont">
-    <form class="loginForm" action="/smbms/LoginServlet"  name="actionForm" id="actionForm"  method="post" >
+    <form class="loginForm" action="LoginServlet"  name="actionForm" id="actionForm"  method="post" >
       <div class="info">${error }</div>
+      <div style="display:flex;justify-content:center;align-items:center;">
+        <input type="radio" name="userType" value="teacher">教师
+        <input type="radio" name="userType" value="student">学生
+      </div>
       <div class="inputbox">
         <label for="userCode">用户名：</label>
         <input type="text" class="input-text" id="userCode" name="userCode" placeholder="请输入用户名" required/>
@@ -30,7 +34,8 @@
       <div class="subBtn">
 
         <input type="submit" value="登录"/>
-        <input type="reset" value="重置"/>
+        <a href="register.jsp">去注册</a>
+        <!--<input type="reset" value="重置"/>-->
       </div>
     </form>
   </section>
