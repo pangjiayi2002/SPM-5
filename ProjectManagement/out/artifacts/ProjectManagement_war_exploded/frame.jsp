@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@include file="/head.jsp"%>
+<%@include file="head.jsp"%>
 <section>
   <div class="right">
     <div class="wFont">
