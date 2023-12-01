@@ -2,6 +2,8 @@ package service.Student;
 
 import Pojo.Student;
 
+import java.util.List;
+
 public interface StudentService {
     /**
      * 用户登录
@@ -19,4 +21,5 @@ public interface StudentService {
      * @return
      */
     public boolean add(Student student);
+    public List<String> getStuNameList();
 }

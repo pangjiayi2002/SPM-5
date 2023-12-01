@@ -28,8 +28,6 @@ public class BaseDao {
         username = params.getProperty("username");
         password = params.getProperty("password");
     }
-
-
     /**
      * 获取数据库连接
      *

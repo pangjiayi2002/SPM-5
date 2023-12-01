@@ -48,7 +48,7 @@ public class StudentDaoImpl implements StudentDao{
         PreparedStatement pstm = null;
         int updateRows = 0;
         if (null != connection) {
-            String sql = "insert into spm.student (idstudent,stuname,password) values(?,?,?)";
+            String sql = "insert into spm.student (stuname,password) values(?,?)";
             Object[] params = {student.getIdstudent(),student.getStuname(), student.getPassword()};
             updateRows = BaseDao.execute(connection, pstm, sql, params);
             BaseDao.closeResource(null, pstm, null);
@@ -56,7 +56,7 @@ public class StudentDaoImpl implements StudentDao{
         return updateRows;
     }
 
-    public ArrayList<String> getStuNameList(Connection connection) throws SQLException {
+    public List<String> getStuNameList(Connection connection) throws SQLException {
         PreparedStatement pstm=null;
         ResultSet rs=null;
         ArrayList<String> StuNameList=new ArrayList<>();

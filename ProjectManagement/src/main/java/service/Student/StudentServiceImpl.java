@@ -7,6 +7,7 @@ import Pojo.Student;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 public class StudentServiceImpl implements StudentService {
     //业务层调用Dao层，所以我们要引入Dao层
@@ -43,8 +44,6 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public boolean add(Student student) {
-        // TODO Auto-generated method stub
-
         boolean flag = false;
         Connection connection = null;
         try {
@@ -58,15 +57,12 @@ public class StudentServiceImpl implements StudentService {
             } else {
                 System.out.println("add failed!");
             }
-
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
             try {
                 System.out.println("rollback==================");
                 connection.rollback();
             } catch (SQLException e1) {
-                // TODO Auto-generated catch block
                 e1.printStackTrace();
             }
         } finally {
@@ -74,5 +70,18 @@ public class StudentServiceImpl implements StudentService {
             BaseDao.closeResource(connection, null, null);
         }
         return flag;
+    }
+    public List<String> getStuNameList(){
+        Connection connection = null;
+        List<String> studentList = null;
+        try {
+            connection = BaseDao.getConnection();
+            studentList = studentDao.getStuNameList(connection);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.closeResource(connection, null, null);
+        }
+        return studentList;
     }
 }
