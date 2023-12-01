@@ -17,7 +17,7 @@
     <h1>在线网站学习系统</h1>
   </header>
   <section class="loginCont">
-    <form class="loginForm" action="LoginServlet"  name="actionForm" id="actionForm"  method="post" >
+    <form class="loginForm" action="LoginServlet"  name="actionForm"   method="post" >
       <div class="info">${error }</div>
       <div style="display:flex;justify-content:center;align-items:center;">
         <input type="radio" name="userType" value="teacher">教师
@@ -38,6 +38,7 @@
         <a href="register.jsp">去注册</a>
         <!--<input type="reset" value="重置"/>-->
       </div>
+    </form>
     </form>
   </section>
 </section>
