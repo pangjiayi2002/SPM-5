@@ -25,7 +25,7 @@ public class StudentDaoImpl implements StudentDao{
         Student student= null;
         try {
             if (null != connection) {
-                String sql = "select * from smbms_user where userCode=?";
+                String sql = "select * from spm.student where stuname=?";
                 Object[] params = {stuname};
                 rs = BaseDao.execute(connection, pstm, rs, sql, params);
                 if (rs.next()) {
