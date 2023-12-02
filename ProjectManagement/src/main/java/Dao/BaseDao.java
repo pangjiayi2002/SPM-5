@@ -36,7 +36,7 @@ public class BaseDao {
     public static Connection getConnection() {
         Connection connection = null;
         try {
-            Class.forName(driver);
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(url, username, password);
         } catch (Exception e) {
             e.printStackTrace();
