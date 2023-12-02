@@ -44,7 +44,7 @@ public class LoginServlet extends HttpServlet {
                 //放入session
                 request.getSession().setAttribute("student",student);
                 //页面重定向
-                response.sendRedirect("frame.jsp");
+                response.sendRedirect("");
             }else{
                 //页面转发（log.jsp）带着提示信息转发
                 request.setAttribute("error","用户名或密码不正确");
