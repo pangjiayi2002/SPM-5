@@ -27,7 +27,6 @@ public class LoginServlet extends HttpServlet {
         String userPassword = request.getParameter("userPassword");
         //调用service方法，进行用户匹配
         if(userType!=null && userType.equals("teacher")){
-            System.out.println("11111");
             if(userCode.equals("admin") && userPassword.equals("admin")){
                 //教师端成功登录
                 //页面重定向

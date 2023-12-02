@@ -49,7 +49,7 @@ public class StudentDaoImpl implements StudentDao{
         int updateRows = 0;
         if (null != connection) {
             String sql = "insert into spm.student (stuname,password) values(?,?)";
-            Object[] params = {student.getIdstudent(),student.getStuname(), student.getPassword()};
+            Object[] params = {student.getStuname(), student.getPassword()};
             updateRows = BaseDao.execute(connection, pstm, sql, params);
             BaseDao.closeResource(null, pstm, null);
         }
