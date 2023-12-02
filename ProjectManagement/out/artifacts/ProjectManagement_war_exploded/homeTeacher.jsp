@@ -3,6 +3,9 @@
   User: a
   Date: 2023/12/2
   Time: 10:29
+  User: 未闻花名
+  Date: 2023/12/2
+  Time: 10:38
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -40,6 +43,10 @@
         <input type="submit" value="学习资料库" style="background-color: #5994d6;width:150px;height:100px;font-size: 20px;border: none">
         <input type="submit" value="上传题库" style="background-color: lightcoral;width:150px;height:100px;font-size: 20px;border: none">
     </div>
+</head>
+<body>
+<div>
+
 </div>
 </body>
 </html>

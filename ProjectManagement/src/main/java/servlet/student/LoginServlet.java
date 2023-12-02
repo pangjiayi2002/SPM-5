@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
             if(userCode.equals("admin") && userPassword.equals("admin")){
                 //教师端成功登录
                 //页面重定向
-                response.sendRedirect("");
+                response.sendRedirect("homeTeacher.jsp");
             }else{
                 //页面转发（log.jsp）带出提示信息
                 request.setAttribute("error","用户名或密码不正确");
@@ -44,7 +44,7 @@ public class LoginServlet extends HttpServlet {
                 //放入session
                 request.getSession().setAttribute("student",student);
                 //页面重定向
-                response.sendRedirect("frame.jsp");
+                response.sendRedirect("");
             }else{
                 //页面转发（log.jsp）带着提示信息转发
                 request.setAttribute("error","用户名或密码不正确");
