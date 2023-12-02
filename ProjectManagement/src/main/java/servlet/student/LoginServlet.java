@@ -37,7 +37,8 @@ public class LoginServlet extends HttpServlet {
                 request.setAttribute("error","用户名或密码不正确");
                 request.getRequestDispatcher("log.jsp").forward(request,response);
             }
-        }else{
+        }
+        else if(userType!=null && userType.equals("student")){
             //学生端
             Student student=studentService.login(userCode,userPassword);
             if(null!=student){//登录成功
