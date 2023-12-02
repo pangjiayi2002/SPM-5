@@ -18,7 +18,7 @@
     </header>
     <section class="loginCont">
         <form class="loginForm" action="${pageContext.request.contextPath }/RegisterServlet"  name="actionForm"   method="post" >
-            <div class="info">${requestScope.error }</div>
+            <div class="info">${error }</div>
 
             <!--<form class="loginForm" action="${pageContext.request.contextPath }/servlet.student.LoginServlet"  name="actionForm" id="actionForm"  method="post" >-->
             <!--<div class="info">${error}</div>-->
@@ -32,7 +32,6 @@
             </div>
             <div class="subBtn">
                 <input type="submit" value="注册"/>
-
                 <!--<input type="reset" value="重置"/>-->
             </div>
         </form>
