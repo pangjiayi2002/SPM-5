@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: a
-  Date: 2023/12/2
-  Time: 10:29
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -37,7 +30,7 @@
     </div>
     <br>
     <div id="buttons">
-        <input type="submit" value="教学视频" style="background-color: #3a8dc1;width:150px;height:100px;font-size: 20px;border: none">
+        <input type="submit" value="教学视频" style="background-color: #3a8dc1;width:150px;height:100px;font-size: 20px;border: none" onclick="window.location.href='videoPlay.jsp'" >
         <input type="submit" value="作业" style="background-color: #8bc93a;width:150px;height:100px;font-size: 20px;border: none">
         <input type="submit" value="测试" style="background-color: aquamarine;width:150px;height:100px;font-size: 20px;border: none">
         <input type="submit" value="留言板" style="background-color: #faca0d;width:150px;height:100px;font-size: 20px;border: none">
