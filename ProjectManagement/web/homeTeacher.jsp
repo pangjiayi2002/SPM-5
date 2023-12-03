@@ -19,7 +19,11 @@
         }
         #header{
             justify-content: center;
-
+            text-align: center;
+        }
+        #buttons{
+            justify-content: center;
+            text-align: center;
         }
         input[type="submit"]{
             margin: 20px;
@@ -32,10 +36,10 @@
 <div>
     <div id="header" >
         <h1>教师端首页</h1>
-        <img src="./images/logo.jpg" alt="none" width="80%%" height="40%">
+        <img src="./images/logo.jpg" alt="none" width="80%%" height="50%">
     </div>
     <br>
-    <div>
+    <div id="buttons">
         <input type="submit" value="上传教学视频" style="background-color: #3a8dc1;width:150px;height:100px;font-size: 20px;border: none">
         <input type="submit" value="作业管理" style="background-color: #8bc93a;width:150px;height:100px;font-size: 20px;border: none">
         <input type="submit" value="测试管理" style="background-color: aquamarine;width:150px;height:100px;font-size: 20px;border: none">

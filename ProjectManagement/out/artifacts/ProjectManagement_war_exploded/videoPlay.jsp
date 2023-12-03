@@ -11,6 +11,9 @@
     <title>视频播放</title>
 </head>
 <body>
-<video src="video/3.mp4" controls autoplay></video>
+<div>
+    <h1>项目管理课程教学视频</h1>
+    <video src="XXXXX" controls autoplay></video>
+</div>
 </body>
 </html>
