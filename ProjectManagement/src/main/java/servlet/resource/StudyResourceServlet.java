@@ -1,4 +1,4 @@
-package servlet;
+package servlet.resource;
 
 import Pojo.Resource;
 import jakarta.servlet.*;

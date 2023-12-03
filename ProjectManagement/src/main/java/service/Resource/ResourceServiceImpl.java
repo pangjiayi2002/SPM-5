@@ -25,4 +25,33 @@ public class ResourceServiceImpl implements ResourceService{
         }
         return ResourceList;
     }
+
+    public boolean add(Resource resource){
+        boolean flag = false;
+        Connection connection = null;
+        try {
+            connection = BaseDao.getConnection();
+            connection.setAutoCommit(false);//开启JDBC事务管理
+            int updateRows = resourceDao.add(connection, resource);
+            connection.commit();
+            if (updateRows > 0) {
+                flag = true;
+                System.out.println("add success!");
+            } else {
+                System.out.println("add failed!");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            try {
+                System.out.println("rollback==================");
+                connection.rollback();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+        } finally {
+            //在service层进行connection连接的关闭
+            BaseDao.closeResource(connection, null, null);
+        }
+        return flag;
+    }
 }

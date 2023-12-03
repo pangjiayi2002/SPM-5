@@ -32,4 +32,17 @@ public class ResourceDaoImpl implements ResourceDao{
         }
         return ResourceList;
     }
+
+    //添加资料
+    public int add(Connection connection,Resource resource){
+        PreparedStatement pstm=null;
+        int updateRows=0;
+        if(null!=connection){
+            String sql="insert into spm.studyresource(name,src,resource_type)value(?,?,?)";
+            Object[] params={resource.getName(),resource.getSrc(),resource.getResource_type()};
+            updateRows=BaseDao.execute(connection,pstm,sql,params);
+            BaseDao.closeResource(null,pstm,null);
+        }
+        return updateRows;
+    }
 }

@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>学习资料</title>
+    <title>学生端查看学习资料</title>
 </head>
 <body>
 <div>
