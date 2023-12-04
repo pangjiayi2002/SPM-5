@@ -37,7 +37,7 @@
 
         <input type="submit" value="学习资料库" style="background-color: #5994d6;width:150px;height:100px;font-size: 20px;border: none"
         onclick="window.location.href='studyResource.jsp'">
-    
+    </div>
 </div>
 </body>
 </html>
