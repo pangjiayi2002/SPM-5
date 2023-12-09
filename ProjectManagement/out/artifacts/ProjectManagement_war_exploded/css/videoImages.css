@@ -1,0 +1,28 @@
+#title{
+    text-align: center;
+}
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.index-vedio {
+    flex: 1 0 350px;
+    margin: 30px;
+    list-style-type: none;
+}
+
+ul,li{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+/*父级元素相对定位*/
+#content ul{
+    position:relative;
+}
+.tipText{
+    position:absolute;
+    bottom: 0px;
+}
+

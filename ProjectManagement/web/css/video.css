@@ -28,3 +28,9 @@ h1 {
 button:hover {
     opacity: 0.8;
 }
+
+.index-vedio{
+    width: 830px;
+    height: 460px;
+    margin: 50px auto;
+}
