@@ -36,6 +36,7 @@
         <input type="submit" value="留言板" style="background-color: #faca0d;width:150px;height:100px;font-size: 20px;border: none">
         <input type="submit" value="学习资料库" style="background-color: #5994d6;width:150px;height:100px;font-size: 20px;border: none" onclick="window.location.href='TeacherUploadResource.jsp'">
         <input type="submit" value="上传题库" style="background-color: lightcoral;width:150px;height:100px;font-size: 20px;border: none">
+        <input type="submit" value="公告栏" style="background-color:#9b59b6;width:150px;height:100px;font-size: 20px;border: none" onclick="window.location.href='noticeList.jsp'">
     </div>
 </div>
 </body>
