@@ -5,6 +5,26 @@
 <head>
   <meta charset="UTF-8">
   <title>添加公告</title>
+  <style>
+  .container {
+    padding: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    margin-bottom: 5px;
+  }
+  .btn {
+    margin-right: 10px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+</style>
+
   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

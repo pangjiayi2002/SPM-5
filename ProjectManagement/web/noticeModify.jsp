@@ -15,12 +15,12 @@
 <body>
 <div class="container">
   <%
-    String noticeTime = request.getParameter("noticeTime");
-    if (noticeTime != null && !noticeTime.isEmpty()) {
+    String id = request.getParameter("id");
+    if (id != null && !id.isEmpty()) {
       NoticeService noticeService = new NoticeServiceImpl();
-      Notice notice = noticeService.getByTime(noticeTime);
+      Notice notice = noticeService.getById(id);
   %>
-  <h1>修改留言</h1>
+  <h1>修改公告</h1>
   <form role="form" action="${pageContext.request.contextPath}/NoticeModifyServlet" method="post">
     <input type="hidden" name="createTime" value="<%=notice.getCreateTime()%>">
     <div class="form-group">

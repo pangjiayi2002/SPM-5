@@ -58,18 +58,18 @@ public class NoticeServiceImpl implements NoticeService{
     }
 
     @Override
-    public Notice getByTime(String createTime) {
+    public Notice getById(String id) {
         Connection connection = null;
-        Notice TimeList = null;
+        Notice IdList = null;
         try {
             connection = BaseDao.getConnection();
-            TimeList = noticeDao.getByTime(connection,createTime);
+            IdList = noticeDao.getById(connection,id);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             BaseDao.closeResource(connection, null, null);
         }
-        return TimeList;
+        return IdList;
     }
 
     @Override
@@ -89,12 +89,12 @@ public class NoticeServiceImpl implements NoticeService{
     }
 
     @Override
-    public boolean deleteByTime(String createTime) {
+    public boolean deleteById(String id) {
         Connection connection = null;
         boolean flag = false;
         try {
             connection = BaseDao.getConnection();
-            if (noticeDao.deleteByTime(connection,createTime) > 0)
+            if (noticeDao.deleteById(connection,id) > 0)
                 flag = true;
         } catch (Exception e) {
             e.printStackTrace();

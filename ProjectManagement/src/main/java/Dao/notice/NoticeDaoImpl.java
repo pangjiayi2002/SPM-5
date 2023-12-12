@@ -48,7 +48,7 @@ public class NoticeDaoImpl implements NoticeDao{
     }
 
     @Override
-    public Notice getByTime(Connection connection,String createTime) throws Exception {
+    public Notice getById(Connection connection,String id) throws Exception {
         PreparedStatement pstm=null;
         ResultSet rs=null;
         Notice notice=null;
@@ -58,9 +58,10 @@ public class NoticeDaoImpl implements NoticeDao{
             Object[] params=list.toArray();
             rs=BaseDao.execute(connection,pstm,rs,sql,params);
             while(rs.next()){
-                if (createTime.equals(rs.getString("createTime"))){
+                if (id.equals(rs.getString("id"))){
                     String title=rs.getString("title");
                     String content=rs.getString("content");
+                    String createTime=rs.getString("createTime");
                     notice=new Notice(title,content,createTime);
                 }
             }
@@ -82,12 +83,12 @@ public class NoticeDaoImpl implements NoticeDao{
         return flag;
     }
 
-    public int deleteByTime(Connection connection, String createTime)throws Exception {
+    public int deleteById(Connection connection, String id)throws Exception {
         PreparedStatement pstm = null;
         int flag = 0;
         if (null != connection) {
-            String sql = "delete from spm.notice where createTime=?";
-            Object[] params = {createTime};
+            String sql = "delete from spm.notice where id=?";
+            Object[] params = {id};
             flag = BaseDao.execute(connection, pstm, sql, params);
             BaseDao.closeResource(null, pstm, null);
         }

@@ -25,8 +25,6 @@
 <body>
 <div id="title">
     <h1>项目管理课程教学视频</h1>
-
-    <video src="XXXXX" controls autoplay></video>
 </div>
 <%
     VideoService videoService = new VideoServiceImpl();
@@ -64,4 +62,3 @@
 <a href="homeStudent.jsp">返回学生首页</a>
 </body>
 </html>
-

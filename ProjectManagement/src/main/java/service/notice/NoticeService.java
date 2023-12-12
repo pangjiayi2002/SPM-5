@@ -9,8 +9,8 @@ import java.util.List;
 public interface NoticeService {
     public boolean add(Notice notice);
     List<Notice> getAll()throws Exception;
-    public Notice getByTime(String createTime);
+    public Notice getById(String id);
     public boolean modify(Notice notice);
-    public boolean deleteByTime(String createTime);
+    public boolean deleteById(String id);
 
 }

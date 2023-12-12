@@ -23,11 +23,6 @@ public class NoticeModifyServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String title = request.getParameter("title");
         String content = request.getParameter("content");
-//        LocalDateTime currentTime = LocalDateTime.now();
-//        // 定义日期时间格式
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-//        // 格式化当前时间
-//        String formattedTime = currentTime.format(formatter);
         String createTime=request.getParameter("createTime");
         Notice notice=new Notice(title,content,createTime);
         System.out.println(notice.toString());

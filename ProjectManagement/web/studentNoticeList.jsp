@@ -31,13 +31,9 @@
     <c:forEach var="notice" items="<%=notices%>">
       <tr>
         <td>${notice.title}</td>
+        <td>${notice.createTime}</td>
         <td>
-          <a href="noticeDetail.jsp?noticeTime=${notice.createTime}">
-              ${notice.createTime}
-          </a>
-        </td>
-        <td>
-          <span><a class="viewBill" href="noticeDetail.jsp?noticeTime=${notice.createTime}"><img src="${pageContext.request.contextPath }/images/read.png" alt="查看" title="查看"/></a></span>
+          <span><a class="view" href="noticeDetail.jsp?id=${notice.id}"><img src="${pageContext.request.contextPath }/images/read.png" alt="查看" title="查看"/></a></span>
           </td>
       </tr>
     </c:forEach>
