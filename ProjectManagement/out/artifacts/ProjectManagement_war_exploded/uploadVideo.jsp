@@ -32,7 +32,7 @@
             <li class="tipText">${video.title}</li>
         </ul>
     </c:forEach>
-    视频标题:
+    将要上传的视频标题:
     <textarea name="videoTitle" id="videoTitle"></textarea><br><br>
     <input type="file" class="file" name="fileInput" id="fileInput"><br>
     <input type="submit" value="上传" class="up"/>
