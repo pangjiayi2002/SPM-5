@@ -41,7 +41,22 @@
         #add:hover {
             color: #0056b3;
         }
-
+        body {
+            background-color: #f5f5f5; /* 设置页面背景颜色 */
+        }
+        .container {
+            background-color: #fff; /* 设置容器背景颜色 */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .page-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #fanhui {
+            margin-top: 10px; /* 调整按钮与标题的垂直间距 */
+        }
     </style>
 
     <meta charset="UTF-8">
@@ -57,7 +72,14 @@
     List<Notice> notices = noticeService.getAll();
 %>
 <div class="container">
-    <h1>通知公告</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="page-title">通知公告</h1>
+        </div>
+        <div class="col-md-4 text-right">
+            <a class="btn btn-primary" id="fanhui" href="homeTeacher.jsp">返回首页</a>
+        </div>
+    </div>
     <table class="table table-striped">
         <thead>
         <tr>
