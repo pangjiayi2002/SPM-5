@@ -2,11 +2,8 @@
 <%@ page import="service.notice.NoticeServiceImpl" %>
 <%@ page import="Pojo.Notice" %>
 <%@ page import="java.util.List" %>
-<%@ page import="service.test.TestServiceImpl" %>
-<%@ page import="service.test.TestService" %>
-<%@ page import="Pojo.Test" %>
-<%@ page import="service.userTestAnswer.UserAnswerServiceImpl" %>
-<%@ page import="service.userTestAnswer.UserAnswerService" %>
+<%@ page import="service.userTestAnswer.UserTestAnswerServiceImpl" %>
+<%@ page import="service.userTestAnswer.UserTestAnswerService" %>
 <%@ page import="Pojo.StuTest" %>
 <%@ page import="Pojo.Student" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
@@ -61,7 +58,7 @@
 </head>
 <body>
     <%
-    UserAnswerService userTestAnswerService=new UserAnswerServiceImpl();
+    UserTestAnswerService userTestAnswerService=new UserTestAnswerServiceImpl();
     int stuId = ((Student)request.getSession().getAttribute("student")).getIdstudent();
     List<StuTest> tests = userTestAnswerService.getAll(stuId);
 %>
