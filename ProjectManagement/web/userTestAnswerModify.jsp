@@ -24,6 +24,21 @@
             Test test = testService.getById(id);
     %>
     <h1>作答</h1>
+    交卷时间还剩：<span id="span1" style="color: red">1800</span>秒
+    <script language="JavaScript">
+        function time() {
+            var span1 = document.getElementById("span1");
+            var i = span1.innerHTML;
+            if(i>0){
+                i = i-1;
+                span1.innerHTML=i;
+            }
+        }
+        window.setInterval("time()",1000);
+    </script>
+    <%
+        response.setHeader("refresh","1800;url=stuDoTask.jsp");
+    %>
     <form role="form" action="${pageContext.request.contextPath}/UserTestAnswerAddServlet" method="post">
         <input type="hidden" name="testId" value="<%=test.getId()%>">
         <div class="form-group">
