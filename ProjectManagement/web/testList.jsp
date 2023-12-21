@@ -49,7 +49,7 @@
     </style>
 
     <meta charset="UTF-8">
-    <title>作业管理</title>
+    <title>测试管理</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%--    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>--%>
@@ -61,12 +61,12 @@
     List<Test> tests = testService.getAll();
 %>
 <div class="container">
-    <h1>作业管理</h1>
+    <h1>测试管理</h1>
     <table class="table table-striped">
         <thead>
         <tr>
             <th>编号</th>
-            <th>作业题目</th>
+            <th>测试题目</th>
         </tr>
         </thead>
         <tbody>
@@ -89,6 +89,6 @@
         </c:forEach>
         </tbody>
     </table>
-    <a href="testAdd.jsp" id="add">添加作业</a>
+    <a href="testAdd.jsp" id="add">发布测试</a>
 </div>
 

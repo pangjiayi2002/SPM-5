@@ -2,10 +2,12 @@
 <%@ page import="service.notice.NoticeServiceImpl" %>
 <%@ page import="Pojo.Notice" %>
 <%@ page import="java.util.List" %>
+<%@ page import="service.test.TestServiceImpl" %>
+<%@ page import="service.test.TestService" %>
+<%@ page import="Pojo.Test" %>
 <%@ page import="service.userTestAnswer.UserTestAnswerServiceImpl" %>
 <%@ page import="service.userTestAnswer.UserTestAnswerService" %>
-<%@ page import="Pojo.StuTest" %>
-<%@ page import="Pojo.Student" %>
+<%@ page import="Pojo.UserTestAnswer" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -50,7 +52,7 @@
     </style>
 
     <meta charset="UTF-8">
-    <title>历史测试</title>
+    <title>学生作答管理</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%--    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>--%>
@@ -58,61 +60,33 @@
 </head>
 <body>
     <%
-    UserTestAnswerService userTestAnswerService=new UserTestAnswerServiceImpl();
-    int stuId = ((Student)request.getSession().getAttribute("student")).getIdstudent();
-    List<StuTest> tests = userTestAnswerService.getAll(stuId);
+    String id = request.getParameter("id");
+    UserTestAnswerService userTestAnswerService = new UserTestAnswerServiceImpl();
+    List<UserTestAnswer> userTestAnswerList = userTestAnswerService.getAllWithTeacher(Integer.valueOf(id));
 %>
 <div class="container">
-    <h1>历史测试</h1>
+    <h1>学生作答管理</h1>
     <table class="table table-striped">
         <thead>
         <tr>
             <th>测试题目</th>
-            <th>我的回答</th>
+            <th>学生姓名</th>
             <th>分数</th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="test" items="<%=tests%>">
+        <c:forEach var="answer" items="<%=userTestAnswerList%>">
             <tr>
-                <td>${test.content}</td>
+                <td>${answer.testName}</td>
+                <td>${answer.stuName}</td>
+                <td>${answer.score}</td>
                 <td>
-                    <c:if test="${test.answer == null}">
-                        还未作答
-                    </c:if>
-                    <c:if test="${test.answer != null}">
-                        ${test.answer}
-                    </c:if>
-                </td>
-                <td>
-                    <c:if test="${test.score == null}">
-                        还未批改
-                    </c:if>
-                    <c:if test="${test.score != null}">
-                        ${test.score}分
-                    </c:if>
-                </td>
-                <td>
-                    <span>
-                        <a class="modifyNotice" href="javascript:void(0);"
-                           onclick="checkAnswer('${test.answer}', ${test.id});">
-                            <img src="${pageContext.request.contextPath }/images/xiugai.png" alt="作答" title="作答"/>
-                        </a>
-                    </span>
+                    <span><a class="viewNotice" href="answerScoreModify.jsp?id=${answer.id}"><img
+                            src="${pageContext.request.contextPath }/images/xiugai.png" alt="批改" title="批改"/></a></span>
                 </td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
 </div>
-
-<script>
-    function checkAnswer(answer, testId) {
-        if (answer !== null && answer !== "") {
-            alert("您已作答");
-        } else {
-            window.location.href = "userTestAnswerModify.jsp?id=" + testId;
-        }
-    }
-</script>
 

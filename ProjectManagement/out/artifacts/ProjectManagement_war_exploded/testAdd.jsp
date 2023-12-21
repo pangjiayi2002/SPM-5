@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>添加测试</title>
+    <title>添加作业</title>
     <style>
         .container {
             padding: 20px;
@@ -35,7 +35,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>添加测试</h1>
+    <h1>添加作业</h1>
     <form role="form" action="${pageContext.request.contextPath}/TestAddServlet" method="post">
         <div class="form-group">
             <label for="content">内容</label>

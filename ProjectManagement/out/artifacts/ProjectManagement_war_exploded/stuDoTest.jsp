@@ -50,7 +50,7 @@
     </style>
 
     <meta charset="UTF-8">
-    <title>历史测试</title>
+    <title>作业列表</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%--    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>--%>
@@ -63,11 +63,11 @@
     List<StuTest> tests = userTestAnswerService.getAll(stuId);
 %>
 <div class="container">
-    <h1>历史测试</h1>
+    <h1>作业列表</h1>
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>测试题目</th>
+            <th>作业题目</th>
             <th>我的回答</th>
             <th>分数</th>
         </tr>
