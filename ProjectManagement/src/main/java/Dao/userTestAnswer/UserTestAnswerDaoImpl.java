@@ -58,7 +58,7 @@ public class UserTestAnswerDaoImpl implements UserTestAnswerDao {
         ArrayList<UserTestAnswer> List = new ArrayList<>();
         if (null != connection) {
             List<Object> testList = new ArrayList<>();
-            String sql = "select ua.id,ua.score,s.stuname,t.content from user_answer ua inner join student s on ua.stu_id = s.idstudent inner join test t on ua.test_id = t.id where ua.test_id = ?";
+            String sql = "select ua.id,ua.score,s.stuname,t.content from user_testanswer ua inner join student s on ua.stu_id = s.idstudent inner join test t on ua.test_id = t.id where ua.test_id = ?";
             Object[] params = {testId};
             rs = BaseDao.execute(connection, pstm, rs, sql, params);
             while (rs.next()) {
@@ -103,7 +103,7 @@ public class UserTestAnswerDaoImpl implements UserTestAnswerDao {
         int flag = 0;
         PreparedStatement pstm = null;
         if (null != connection) {
-            String sql = "update spm.user_answer set score = ? where id = ? ";
+            String sql = "update spm.user_testanswer set score = ? where id = ? ";
             Object[] params = {userTestAnswer.getScore(), userTestAnswer.getId()};
             flag = BaseDao.execute(connection, pstm, sql, params);
             BaseDao.closeResource(null, pstm, null);

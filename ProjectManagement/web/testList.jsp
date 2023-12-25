@@ -76,7 +76,7 @@
                 <td>${test.content}</td>
                 <td>
                     <span><a class="viewNotice" href="userTestAnswerList.jsp?id=${test.id}"><img
-                            src="${pageContext.request.contextPath }/images/read.png" alt="批改作业" title="批改作业"/></a></span>
+                            src="${pageContext.request.contextPath }/images/read.png" alt="批改测试" title="批改测试"/></a></span>
                     <span><a class="modifyNotice" href="testModify.jsp?id=${test.id}"><img
                             src="${pageContext.request.contextPath }/images/xiugai.png" alt="修改"
                             title="修改"/></a></span>

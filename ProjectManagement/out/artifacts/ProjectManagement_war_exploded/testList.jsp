@@ -49,7 +49,7 @@
     </style>
 
     <meta charset="UTF-8">
-    <title>作业管理</title>
+    <title>测试管理</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%--    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>--%>
@@ -76,7 +76,7 @@
                 <td>${test.content}</td>
                 <td>
                     <span><a class="viewNotice" href="userTestAnswerList.jsp?id=${test.id}"><img
-                            src="${pageContext.request.contextPath }/images/read.png" alt="批改作业" title="批改作业"/></a></span>
+                            src="${pageContext.request.contextPath }/images/read.png" alt="批改测试" title="批改测试"/></a></span>
                     <span><a class="modifyNotice" href="testModify.jsp?id=${test.id}"><img
                             src="${pageContext.request.contextPath }/images/xiugai.png" alt="修改"
                             title="修改"/></a></span>

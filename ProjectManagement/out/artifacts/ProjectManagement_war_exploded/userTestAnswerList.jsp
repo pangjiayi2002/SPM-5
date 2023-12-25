@@ -52,7 +52,7 @@
     </style>
 
     <meta charset="UTF-8">
-    <title>学生作答管理</title>
+    <title>学生测试作答管理</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%--    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>--%>
@@ -65,7 +65,7 @@
     List<UserTestAnswer> userTestAnswerList = userTestAnswerService.getAllWithTeacher(Integer.valueOf(id));
 %>
 <div class="container">
-    <h1>学生作答管理</h1>
+    <h1>学生测试作答管理</h1>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -81,7 +81,7 @@
                 <td>${answer.stuName}</td>
                 <td>${answer.score}</td>
                 <td>
-                    <span><a class="viewNotice" href="answerScoreModify.jsp?id=${answer.id}"><img
+                    <span><a class="viewNotice" href="testAnswerScoreModify.jsp?id=${answer.id}"><img
                             src="${pageContext.request.contextPath }/images/xiugai.png" alt="批改" title="批改"/></a></span>
                 </td>
             </tr>

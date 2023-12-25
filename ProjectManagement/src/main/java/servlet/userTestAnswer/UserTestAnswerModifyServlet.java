@@ -29,6 +29,6 @@ public class UserTestAnswerModifyServlet extends HttpServlet {
         userTestAnswer.setId(Integer.valueOf(id));
         userTestAnswer.setScore(Double.valueOf(score));
         userTestAnswerService.modify(userTestAnswer);
-        request.getRequestDispatcher("taskList.jsp").forward(request, response);
+        request.getRequestDispatcher("testList.jsp").forward(request, response);
     }
 }

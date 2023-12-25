@@ -81,7 +81,7 @@
                 <td>${answer.stuName}</td>
                 <td>${answer.score}</td>
                 <td>
-                    <span><a class="viewNotice" href="answerScoreModify.jsp?id=${answer.id}"><img
+                    <span><a class="viewNotice" href="testAnswerScoreModify.jsp?id=${answer.id}"><img
                             src="${pageContext.request.contextPath }/images/xiugai.png" alt="批改" title="批改"/></a></span>
                 </td>
             </tr>
